@@ -1,0 +1,54 @@
+/* Styles for the ResidenceDetailsComponent */
+
+.residence-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.residence-details-container h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+}
+
+.residence-details-container p {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #666;
+}
+
+.residence-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.next-button, .add-button, .update-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.25em;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.next-button:hover, .add-button:hover, .update-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}

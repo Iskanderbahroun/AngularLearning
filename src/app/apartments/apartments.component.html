@@ -1,0 +1,13 @@
+<h1>List of Apartments</h1>
+<button class="btn btn-primary" [routerLink]="['/apartments/add']">Add New Apartment</button>
+<div class="apartment-list">
+  <div class="apartment-item" *ngFor="let apartment of apartments">
+    <h3>Apartment Number: {{ apartment.apartNum }}</h3>
+    <p>Floor Number: {{ apartment.floorNum }}</p>
+    <p>Surface: {{ apartment.surface }} m²</p>
+    <p>Terrace: {{ apartment.terrace ? 'Yes' : 'No' }}</p>
+    <p *ngIf="apartment.terrace">Terrace Surface: {{ apartment.surfaceterrace }} m²</p>
+    <p>Category: {{ apartment.category }}</p>
+    <p>Residence ID: {{ apartment.ResidenceId }}</p>
+  </div>
+</div>

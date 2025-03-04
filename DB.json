@@ -1,0 +1,67 @@
+{
+  "residences": [
+    {
+      "id": "2",
+      "name": "El yasmine",
+      "address": "Ezzahra",
+      "image": "assets/R1.jpg",
+      "status": "En Construction"
+    },
+    {
+      "id": "4",
+      "name": "El Anber",
+      "address": "inconnu",
+      "image": "assets/R4.jpg",
+      "status": "En Construction"
+    },
+    {
+      "id": "9b79",
+      "name": "iskander baahroun",
+      "address": "noo",
+      "image": "assets/R3.jpg",
+      "status": "Disponible"
+    }
+  ],
+  "apartments": [
+    {
+      "id": "1",
+      "apartNum": 101,
+      "floorNum": 1,
+      "surface": 50,
+      "terrace": true,
+      "surfaceterrace": 10,
+      "category": "S+1",
+      "ResidenceId": 1
+    },
+    {
+      "id": "2",
+      "apartNum": 102,
+      "floorNum": 1,
+      "surface": 60,
+      "terrace": false,
+      "surfaceterrace": 0,
+      "category": "S+2",
+      "ResidenceId": 1
+    },
+    {
+      "id": "3",
+      "apartNum": 201,
+      "floorNum": 2,
+      "surface": 70,
+      "terrace": true,
+      "surfaceterrace": 15,
+      "category": "S+3",
+      "ResidenceId": 2
+    },
+    {
+      "id": "4",
+      "apartNum": 202,
+      "floorNum": 2,
+      "surface": 80,
+      "terrace": false,
+      "surfaceterrace": 0,
+      "category": "S+2",
+      "ResidenceId": 2
+    }
+  ]
+}

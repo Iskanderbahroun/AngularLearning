@@ -1,0 +1,13 @@
+<div class="residence-details-container" *ngIf="residence">
+  <h1>Residence Details</h1>
+  <h2>{{ residence.name }}</h2>
+  <p><strong>Address:</strong> {{ residence.address }}</p>
+  <p><strong>Status:</strong> {{ residence.status }}</p>
+  <img [src]="residence.image" class="residence-image" alt="{{ residence.name }}">
+  <div class="button-container">
+    <button class="next-button" (click)="nextResidence()">Next Residence</button>
+    <button class="add-button" [routerLink]="['/residences/add']">Add Residence</button>
+    <button class="update-button" [routerLink]="['/add-residence', residence.id]">Update Residence</button>
+  </div>
+</div>
+<p *ngIf="!residence">Residence not found</p>

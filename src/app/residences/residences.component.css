@@ -1,0 +1,204 @@
+/* Styles for the ResidencesComponent */
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    padding: 15px 20px;
+    width: 100%;
+    max-width: 600px;
+    border: 2px solid #007bff;
+    border-radius: 25px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    font-size: 1.25em;
+    text-align: center;
+}
+
+.search-input:focus {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2), 0 0 5px rgba(0, 123, 255, 0.5);
+    border-color: #0056b3;
+}
+
+.residence-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.residence-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 20px 0;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 900px;
+}
+
+.residence-item:hover {
+    background-color: #f8f8f8;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.residence-image {
+    width: 180px;
+    height: auto;
+    margin-right: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+.residence-details {
+    flex-grow: 1;
+}
+
+.residence-details h3 {
+    margin: 0 0 15px;
+    font-size: 1.75em;
+    color: #333;
+}
+
+.status-disponible {
+    color: green;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    font-size: 1.25em;
+}
+
+.status-en-construction {
+    color: orange;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    font-size: 1.25em;
+}
+
+.status-vendu {
+    color: red;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    font-size: 1.25em;
+}
+
+.status-icon {
+    margin-right: 10px;
+}
+
+.show-location-button, .like-button, .details-button, .apartments-button, .delete-button {
+    margin-right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.25em;
+    display: flex;
+    align-items: center;
+}
+
+.show-location-button:hover, .like-button:hover, .details-button:hover, .apartments-button:hover, .delete-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.delete-button {
+    background-color: #dc3545;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+.show-location-button i, .like-button i, .details-button i, .apartments-button i {
+    margin-right: 10px;
+}
+
+.icon-available::before {
+    content: "✔️";
+}
+
+.icon-construction::before {
+    content: "🚧";
+}
+
+.icon-sold::before {
+    content: "❌";
+}
+
+/* Add padding between buttons */
+.show-location-button {
+    margin-right: 20px;
+}
+
+.like-button {
+    margin-left: 20px;
+}
+
+/* Styles for the h1 and date */
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #007bff;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.date {
+    text-align: center;
+    font-size: 1.25em;
+    color: #666;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* Styles for the Add New Residence button */
+.add-residence-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.add-residence-button-container .btn-success {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.25em;
+}
+
+.add-residence-button-container .btn-success:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Styles for the status and address counts */
+.status-counts, .address-counts {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 1.25em;
+    color: #333;
+}
+
+.status-counts p, .address-counts p {
+    margin: 0 15px;
+    font-weight: bold;
+}

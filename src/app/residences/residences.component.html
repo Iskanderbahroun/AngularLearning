@@ -1,0 +1,48 @@
+<h1 class="updated-title">Listes des résidences</h1>
+
+<div class="search-container">
+  <input type="text" class="search-input" placeholder="Search by name or address" [(ngModel)]="adress" (input)="searchResidences()">
+</div>
+
+<div class="residence-list">
+  <div class="residence-item" *ngFor="let res of filteredResidences">
+    <img [src]="res.image" class="residence-image" alt="{{ res.name }}">
+    <div class="residence-details">
+      <h3 class="card-title">{{res.name | uppercase}}</h3>
+      <h3 *ngIf="res.status==='Disponible'" class="status-disponible">{{res.status | lowercase}}</h3>
+      <h3 *ngIf="res.status==='Vendu'" class="status-vendu">{{res.status}}</h3>
+      <h3 *ngIf="res.status==='En Construction'" class="status-en-construction">{{res.status}}</h3>
+      <button class="btn btn-primary show-location-button" (click)="showLocation(res.address)">Show location</button>
+      <button class="btn btn-primary like-button" (click)="addToFavorite(res)">Like</button>
+      <button class="btn btn-primary details-button" [routerLink]="['/details', res.id]">Details</button>
+      <button class="btn btn-primary apartments-button" [routerLink]="['/apartments/residence', res.id]">Appartements List</button>
+      <button class="btn btn-danger delete-button" (click)="deleteResidence(res.id)">Delete</button>
+    </div>
+  </div>
+</div>
+
+<div class="row" *ngFor="let res of listFavorite">
+  <ul>
+    <li>{{res.name}}</li>
+  </ul>
+</div>
+
+<!-- Add New Residence Button -->
+<div class="add-residence-button-container">
+  <button class="btn btn-success" [routerLink]="['/add-residence']">Add New Residence</button>
+</div>
+
+<!-- Count of Residences by Status -->
+<div class="status-counts">
+  <p>Disponible: {{ getCountByStatus('Disponible') }}</p>
+  <p>En Construction: {{ getCountByStatus('En Construction') }}</p>
+  <p>Vendu: {{ getCountByStatus('Vendu') }}</p>
+</div>
+
+<!-- Count of Residences by Address -->
+<div class="address-counts">
+  <p>Borj Cedria: {{ getCountByAddress('Borj Cedria') }}</p>
+  <p>Ezzahra: {{ getCountByAddress('Ezzahra') }}</p>
+  <p>Rades: {{ getCountByAddress('Rades') }}</p>
+  <p>Inconnu: {{ getCountByAddress('inconnu') }}</p>
+</div>
